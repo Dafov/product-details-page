@@ -1,0 +1,49 @@
+.color {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  margin-top: 1.5rem;
+  margin-right: 1.5rem;
+
+  &-heading {
+    font-size: size(md);
+    color: darken($color: color(primary), $amount: 10%);
+    @include flexPosition(flex-start);
+    margin-top: 3rem;
+
+    @include response(lg) {
+      @include flexPosition;
+    }
+  }
+
+  &-group {
+    display: flex;
+
+    @include response(lg) {
+      @include flexPosition;
+      margin-left: 1.5rem;
+    }
+  }
+
+  &-black {
+    background-color: #262626;
+  }
+  &-blue {
+    background-color: #0d63a5;
+  }
+  &-green {
+    background-color: #078604;
+  }
+  &-white {
+    background-color: #ededed;
+  }
+
+  &:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  &-active {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+  }
+}

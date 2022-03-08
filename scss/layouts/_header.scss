@@ -1,0 +1,12 @@
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-columns:
+    minmax(min-content, 10rem)
+    minmax(10rem, 1fr)
+    minmax(min-content, 10rem);
+
+  gap: 2rem;
+}

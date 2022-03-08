@@ -1,0 +1,39 @@
+.footer {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  padding: 3rem 0;
+  border-top: 0.1rem solid color(primary);
+  margin-top: 10rem;
+
+  &-nav {
+    @include flexPosition;
+
+    font-size: size(sm);
+    list-style: none;
+
+    @include response(lg) {
+      display: block;
+      text-align: center;
+    }
+
+    &-item:not(:last-child)::after {
+      content: "|";
+      padding-right: 10px;
+      color: lighten($color: color(primary), $amount: 20%);
+
+      @include response(lg) {
+        content: "";
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: lighten($color: color(primary), $amount: 20%);
+      transition: all 0.3s;
+
+      &:hover {
+        color: color(primary);
+      }
+    }
+  }
+}

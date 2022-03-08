@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  //   1rem == 10px
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(min-content, 16rem));
+  grid-template-rows: repeat(3, minmax(min-content));
+  row-gap: 1.5rem;
+  background-color: color(secondary);
+}

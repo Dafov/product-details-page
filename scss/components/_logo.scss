@@ -1,0 +1,22 @@
+.logo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-img {
+    width: 25rem;
+    height: 100%;
+    opacity: 0.8;
+
+    @include response(lg) {
+      width: 20rem;
+    }
+
+    @include response(md) {
+      width: 17rem;
+    }
+  }
+}

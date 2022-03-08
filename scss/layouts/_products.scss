@@ -1,0 +1,85 @@
+.products {
+  grid-column: 3 / 11;
+  grid-row: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include response(lg) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.product {
+  &-heading {
+    margin-top: 2rem;
+    font-size: size(xl) + 1rem;
+    color: darken($color: color(primary), $amount: 10%);
+    font-weight: bold;
+    text-transform: uppercase;
+    @include flexPosition(flex-start);
+
+    @include response(lg) {
+      @include flexPosition;
+      font-size: size(lg);
+    }
+
+    &-id {
+      @include flexPosition(flex-start);
+      font-size: size(sm);
+      color: color(primary);
+
+      @include response(lg) {
+        @include flexPosition;
+        font-size: size(xs);
+      }
+    }
+  }
+
+  &-price {
+    font-size: size(lg);
+    margin-top: 3rem;
+    color: darken($color: color(primary), $amount: 10%);
+  }
+
+  &-description {
+    font-size: size(xs);
+    color: color(primary);
+
+    margin-top: 3rem;
+  }
+
+  &-btn {
+    background: color(primary);
+    color: color(secondary);
+    font-size: size(md);
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    margin-top: 2.5rem;
+    border: 3px solid color(primary);
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      background: color(secondary);
+      color: color(primary);
+      border-color: color(primary);
+    }
+  }
+
+  &-color {
+    @include flexPosition(space-between);
+  }
+
+  &-img {
+    grid-column: 2 / 3;
+    width: 100%;
+    height: auto;
+
+    @include response(md) {
+      margin-top: 7rem;
+      scale: 1.4;
+    }
+  }
+}
