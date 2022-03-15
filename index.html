@@ -1,107 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="images/logo.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/png" href="images/logo.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Product Detail Page</title>
-  </head>
-  <body>
-    <div class="container">
-      <!-- Header -->
-      <header class="header">
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <a href="#" class="nav-link" id="shopping-cart">
-                <i class="fas fa-shopping-cart"></i>
-                (0)
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+            integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Product Detail Page</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header class="header">
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-list-item">
+                            <a href="#" class="nav-link" id="shopping-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                                (
+                                <p id="nav-link-text">0</p>
+                                )
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-        <div class="logo">
-          <img src="images/logo.png" class="logo-img" alt="logo" />
+                <div class="logo">
+                    <img src="images/logo.png" class="logo-img" alt="logo" />
+                </div>
+            </header>
+            <!-- End of Header -->
+
+            <!-- Content -->
+            <section class="products">
+                <!-- Content Left -->
+
+                <div class="product" id="product">
+                    <h1 class="product-heading" id="product-heading">
+                        White T-shirt
+                    </h1>
+                    <p class="product-heading-id">#112834</p>
+                    <p class="product-price">$30.00</p>
+                    <p class="product-description">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Dolores officia, possimus nobis perspiciatis
+                        molestiae architecto dolorem quasi! Eos rem nulla
+                        consequuntur consectetur. Consectetur, fugit expedita
+                        cumque dicta soluta reprehenderit ipsam ducimus tempore
+                        delectus nisi possimus voluptate minus tempora sequi
+                        eius accusamus impedit omnis repellendus molestiae
+                        atque, et distinctio?
+                    </p>
+                    <!-- Product Color -->
+                    <div class="product-colors">
+                        <h3 class="color-heading">Select color</h3>
+                        <div class="color-group">
+                            <div class="color color-black"></div>
+                            <div class="color color-white color-active"></div>
+                            <div class="color color-blue"></div>
+                            <div class="color color-green"></div>
+                        </div>
+                        <button
+                            type="button"
+                            class="product-btn"
+                            onclick="buttonClick()"
+                        >
+                            Buy Now
+                        </button>
+                    </div>
+                    <!-- End of Product Color -->
+                </div>
+                <!-- End of Content Left -->
+
+                <!-- Content Right -->
+                <div class="image">
+                    <img
+                        src="images/tshirt-white.png"
+                        alt="Product Image"
+                        class="product-img"
+                        id="product-img"
+                    />
+                </div>
+                <!-- End of Content Right -->
+            </section>
+            <!-- End of Content -->
+
+            <!-- Footer -->
+            <footer class="footer">
+                <ul class="footer-nav">
+                    <li class="footer-nav-item">
+                        <a href="#product-heading" class="footer-nav-link"
+                            >Product Name</a
+                        >
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#shopping-cart" class="footer-nav-link"
+                            >Add to Cart</a
+                        >
+                    </li>
+                    <li class="footer-nav-item">
+                        <a href="#product-img" class="footer-nav-link"
+                            >Images</a
+                        >
+                    </li>
+                </ul>
+            </footer>
+            <!-- End of Footer -->
         </div>
-      </header>
-      <!-- End of Header -->
 
-      <!-- Content -->
-      <section class="products">
-        <!-- Content Left -->
-        <div class="product">
-          <h1 class="product-heading" id="product-heading">Product Name</h1>
-          <p class="product-heading-id">#112833</p>
-          <p class="product-price">$25.00</p>
-          <p class="product-description">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
-            officia, possimus nobis perspiciatis molestiae architecto dolorem
-            quasi! Eos rem nulla consequuntur consectetur. Consectetur, fugit
-            expedita cumque dicta soluta reprehenderit ipsam ducimus tempore
-            delectus nisi possimus voluptate minus tempora sequi eius accusamus
-            impedit omnis repellendus molestiae atque, et distinctio? Nesciunt,
-            voluptatum.
-          </p>
-
-          <!-- Product Color -->
-          <h3 class="color-heading">Select color</h3>
-          <div class="color-group">
-            <div class="color color-black"></div>
-            <div class="color color-white color-active"></div>
-            <div class="color color-blue"></div>
-            <div class="color color-green"></div>
-          </div>
-          <button type="button" class="product-btn">Buy Now</button>
-          <!-- End of Product Color -->
-        </div>
-        <!-- End of Content Left -->
-
-        <!-- Content Right -->
-        <div class="image">
-          <img
-            src="images/tshirt-white.png"
-            alt="Product Image"
-            class="product-img"
-            id="product-img"
-          />
-        </div>
-        <!-- End of Content Right -->
-      </section>
-      <!-- End of Content -->
-
-      <!-- Footer -->
-      <footer class="footer">
-        <ul class="footer-nav">
-          <li class="footer-nav-item">
-            <a href="#product-heading" class="footer-nav-link">Product Name</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#shopping-cart" class="footer-nav-link">Add to Cart</a>
-          </li>
-          <li class="footer-nav-item">
-            <a href="#product-img" class="footer-nav-link">Images</a>
-          </li>
-        </ul>
-      </footer>
-      <!-- End of Footer -->
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>
